@@ -8,9 +8,15 @@ function App() {
 
   return (
     <>
-       <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+       <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="services" element={<ServicesPage />} />
+        <Route path="pricing" element={<PricingPage />} />
+        <Route path="contact" element={<ContactPage />} />
+      </Route>
+    </Routes>
     </>
   )
 }
